@@ -1,0 +1,95 @@
+body {
+  background-color: lightgrey;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#drum-machine {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+
+  padding: 30px;
+  background-color: #282c34;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.display {
+  width: 90%;
+  background-color: #444;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.drum-pad {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.drum-pad:hover {
+  background-color: #45a049;
+}
+
+.drum-pad:active {
+  background-color: #3e8e41;
+}
+@media (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+
+  #drum-machine {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .drum-pad {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .drum-pads {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
